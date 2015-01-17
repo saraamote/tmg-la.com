@@ -1,0 +1,67 @@
+{.section item}
+
+<article class="{@|item-classes}" id="article-{id}" data-item-id="{id}">
+
+  <!--SPECIAL CONTENT-->
+
+  {.section promotedBlock}
+    <div class="special-content">{@}</div> 
+  {.end}
+
+  
+  <!--POST HEADER-->
+    
+  <header>
+    <h1 class="entry-title">
+      {.passthrough?}
+        <a href="{sourceUrl}">{title} <span>&rarr;</span></a>
+      {.or}
+        <a href="{fullUrl}">{title}</a>
+      {.end}
+    </h1>
+    <div class="entry-info">
+      <span class="published"><a href="{fullUrl}" title="Permalink" class="permalink"><time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y}</time></a></span>
+      {.if categories} in <span class="category">{.repeated section categories}<a href="{collection.fullUrl}?category={@}" rel="tag">{@}</a>{.alternates with}, {.end}</span>{.end}
+    </div>
+  </header>
+  
+  
+  <!--POST BODY-->
+
+  {.section body}<div class="body entry-content">{@}</div>{.end}
+      
+  <!--POST FOOTER-->
+    
+  <footer>
+    <div class="post-item-injection">{postItemInjectCode}</div>
+    <div class="entry-info">
+      {.section sourceUrl}Source: <span class="attribution"><a href="{sourceUrl}" class="source-link" target="_blank">{sourceUrl}</a></span>{.end}
+      {.section tags}<span class="tags">Tags: {.repeated section @}<a href="{collection.fullUrl}?tag={@|url-encode}#show-archive" rel="tag">{@}</a>{.alternates with}, {.end}</span>{.end}
+    </div>
+    <div class="engagement">
+      {@|like-button}
+      {@|social-button-inline}
+    </div>
+  </footer>
+  
+
+</article>
+{.end}
+
+
+
+<!--PAGINATION-->
+  
+{.section pagination}
+  <nav class="pagination">
+      {.section prevItem}<a href="{fullUrl}">Prev</a>{.or}Prev{.end} / {.section nextItem}<a href="{fullUrl}">Next</a>{.or}Next{.end}
+  </nav>
+{.end}
+
+
+
+<!-- COMMENTS -->
+
+<section id="comments-{id}" class="comments-wrapper">
+  {item|comments}
+</section>

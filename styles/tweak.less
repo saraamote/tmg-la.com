@@ -1,0 +1,297 @@
+
+/* cache busting xx */
+// SQUARESPACE TWEAK OPTIONS
+
+/*  Site Wide Options */
+
+// tweak: { "type" : "color", "title" : "Site Background", "target" : "body", "category" : "Site Wide Options" }
+@siteBackground: #fff;
+
+// tweak: { "type" : "value", "title" : "Site Width", "min" : 600, "max" : 1800, "step" : 10, "target" : "body:not(.collection-type-gallery) #canvasWrapper", "property" : "width", "category" : "Site Wide Options", "showOnlyWhenPresent" : "body:not(.collection-type-gallery)" }
+@siteWidth: 1100px;
+
+// tweak: { "type" : "value", "title" : "Outer Padding", "min" : 10, "max" : 80, "step" : 5, "target" : "body", "property" : ["padding-top", "padding-left"], "category" : "Site Wide Options" }
+@outerPadding: 30px;
+
+
+// tweak: { "type" : "font", "title" : "Headings", "target" : "h1:not(.site-title), h2, h3", "loadAllVariants" : "true", "category" : "Site Wide Options" }
+.headings-font {
+  font-family: "Helvetica", arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.4em;
+  text-transform: none;
+  letter-spacing: 0px;
+}
+
+// tweak: { "type" : "value", "title" : "Headings Size", "category" : "fonts", "min" : 8, "max" : 72, "target" : "h1:not(.site-title), h2, h3", "category" : "Site Wide Options" }
+@headingsSize: 22px;
+
+// tweak: { "type" : "color", "title" : "Headings Color", "target" : "h1:not(.site-title), h2, h3", "category" : "Site Wide Options" }
+@headingsColor: #222;
+
+// tweak: { "type" : "font", "title" : "Text", "target" : ".hentry, #pageWrapper", "loadAllVariants" : "true", "category" : "Site Wide Options" }
+.body-font {
+  font-family: "Helvetica", arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6em;
+  text-transform: none;
+  letter-spacing: 0px;
+}
+
+// tweak: { "type" : "value", "title" : "Text Size", "category" : "fonts", "min" : 8, "max" : 24, "target" : ".hentry, #pageWrapper", "category" : "Site Wide Options" }
+@bodyTextSize: 12px;
+
+// tweak: { "type" : "color", "title" : "Body Text Color", "target" : "body", "category" : "Site Wide Options" }
+@bodyTextColor: #777;
+
+// tweak: { "type" : "color", "title" : "Body Link Color", "target" : "body", "category" : "Site Wide Options" }
+@bodyLinkColor: #75869f;
+
+// tweak: { "type" : "color", "title" : "Body Link (Hover) Color", "target" : "body", "category" : "Site Wide Options" }
+@bodyLinkHoverColor: #424e61;
+
+// tweak: { "type" : "font", "title" : "Quote", "target" : "blockquote", "category" : "Site Wide Options" }
+.quote-font {
+  font-family: Georgia, sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.4em;
+  text-transform: none;
+  letter-spacing: 0px;
+}
+
+// tweak: { "type" : "value", "title" : "Quote Size", "category" : "fonts", "min" : 8, "max" : 72, "target" : "blockquote", "category" : "Site Wide Options" }
+@quoteSize: 24px;
+
+// tweak: { "type" : "color", "title" : "Button Color", "target" : "#page .form-wrapper input[type='submit']", "showOnlyWhenPresent" : ".main-content .form-wrapper input[type='submit']", "category" : "Site Wide Options" }
+@buttonColor: #333;
+
+
+/*  Sidebar Options */
+
+// tweak: { "type" : "dropdown", "title" : "Sidebar Text Alignment", "options" : [ "Left", "Center", "Right" ], "target" : "#header", "category" : "Sidebar Options" }
+
+// tweak: { "type" : "value", "title" : "Sidebar Width", "min" : 50, "max" : 700, "step" : 5, "target" : "#header", "property" : "width", "category" : "Sidebar Options" }
+@sidebarWidth: 160px;
+
+// tweak: { "type" : "value", "title" : "Sidebar Padding", "min" : 0, "max" : 150, "step" : 5, "target" : "#header", "property" : "margin-right", "category" : "Sidebar Options" }
+@sidebarPadding: 30px;
+
+// tweak: { "type" : "dropdown", "title" : "Sidebar Position", "options" : [ "Left", "Right" ], "target" : "#header", "category" : "Sidebar Options" }
+
+// tweak: { "type" : "checkbox", "title" : "Sidebar Fixed", "default" : "true", "target" : "#header", "category" : "Sidebar Options" }
+
+
+
+
+
+
+/*  Site Title / Logo Options */
+
+// tweak: { "type" : "value", "title" : "Logo Image Width", "min" : 50, "max" : 600, "target" : "h1.logo.image", "category" : "Site Title / Logo Options", "showOnlyWhenPresent" : "#logo h1.image" }
+@logoSize: 160px;
+
+// tweak: { "type" : "font", "title" : "Site Title", "target" : "h1.site-title", "category" : "Site Title / Logo Options", "showOnlyWhenPresent" : "#logo h1.site-title" }
+.site-title-font {
+  font-family: "Wire One", "Helvetica", arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1em;
+  text-transform: none;
+  letter-spacing: 0px;
+}
+
+// tweak: { "type" : "value", "title" : "Site Title Size", "category" : "fonts", "min" : 8, "max" : 72, "target" : "h1.site-title", "category" : "Site Title / Logo Options", "showOnlyWhenPresent" : "#logo h1.site-title" }
+@siteTitleSize: 65px;
+
+// tweak: { "type" : "color", "title" : "Site Title Color", "target" : "#header, h1.site-title", "category" : "Site Title / Logo Options", "showOnlyWhenPresent" : "#logo h1.site-title" }
+@siteTitleColor: #606d80;
+
+// tweak: { "type" : "font", "title" : "Site Subtitle", "target" : ".logo-subtitle", "category" : "Site Title / Logo Options", "showOnlyWhenPresent" : ".logo-subtitle" }
+.subtitle-font {
+  font-family: "Helvetica", arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.4em;
+  text-transform: none;
+  letter-spacing: 0px;
+}
+
+// tweak: { "type" : "value", "title" : "Site Subtitle Size", "category" : "fonts", "min" : 8, "max" : 72, "target" : ".logo-subtitle", "category" : "Site Title / Logo Options", "showOnlyWhenPresent" : ".logo-subtitle" }
+@subtitleSize: 12px;
+
+// tweak: { "type" : "color", "title" : "Site Subtitle Color", "target" : ".logo-subtitle", "category" : "Site Title / Logo Options", "showOnlyWhenPresent" : ".logo-subtitle" }
+@subtitleColor: #aaa;
+
+// tweak: { "type" : "value", "title" : "Mobile Logo Image Size", "min" : 10, "max" : 400, "target" : "h1.logo.image", "category" : "Site Title / Logo Options", "showOnlyWhenPresent" : "#logo h1.image" }
+@mobileLogoSize: 100px;
+
+// tweak: { "type" : "dropdown", "title" : "Mobile Site Title Style", "options" : [ "Manual", "Auto" ], "default" : "Manual", "target" : "h1.site-title", "category" : "Site Title / Logo Options", "showOnlyWhenPresent" : "#logo h1.site-title"}
+
+// tweak: { "type" : "font", "title" : "Mobile Site Title", "target" : "h1.site-title", "category" : "Site Title / Logo Options", "showOnlyWhenPresent" : ".mobile-site-title-style-manual #logo h1.site-title" }
+.mobile-site-title-font {
+  font-family: "Wire One", "Helvetica", arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+}
+
+// tweak: { "type" : "value", "title" : "Mobile Site Title Size", "category" : "fonts", "min" : 8, "max" : 72, "target" : "h1.site-title", "category" : "Site Title / Logo Options", "showOnlyWhenPresent" : ".mobile-site-title-style-manual #logo h1.site-title" }
+@mobileSiteTitleSize: 40px;
+
+
+
+
+
+
+
+
+/*  Navigation Options */
+
+// tweak: { "type" : "font", "title" : "Navigation", "category" : "Site Navigation Options", "target" : "#topNav" }
+.nav-font {
+  font-family: "Helvetica", arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 1.5em;
+}
+
+// tweak: { "type" : "value", "title" : "Navigation Size", "category" : "fonts", "min" : 8, "max" : 72, "target" : "#topNav", "category" : "Site Navigation Options" }
+@navSize: 15px;
+
+// tweak: { "type" : "color", "title" : "Navigation Color", "target" : "#topNav", "category" : "Site Navigation Options" }
+@navColor: #8e959f;
+
+// tweak: { "type" : "color", "title" : "Navigation (Active) Color", "target" : "#topNav", "category" : "Site Navigation Options" }
+@navActiveColor: #37404e;
+
+// tweak: { "type" : "color", "title" : "Navigation (Hover) Color", "target" : "#topNav", "category" : "Site Navigation Options" }
+@navHoverColor: #37404e;
+
+// tweak: { "type" : "font", "title" : "Secondary Navigation", "target" : "#topNav", "category" : "Site Navigation Options", "showOnlyWhenPresent" : "#secondaryNavigation ul li" }
+.secondary-nav-font {
+  font-family: "Helvetica", arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.8em;
+  text-transform: none;
+  letter-spacing: 0px;
+}
+
+// tweak: { "type" : "value", "title" : "Secondary Navigation Size", "category" : "fonts", "min" : 8, "max" : 72, "target" : "#topNav", "category" : "Site Navigation Options", "showOnlyWhenPresent" : "#secondaryNavigation ul li" }
+@secondaryNavSize: 12px;
+
+// tweak: { "type" : "color", "title" : "Secondary Navigation Color", "target" : "#topNav", "category" : "Site Navigation Options", "showOnlyWhenPresent" : "#secondaryNavigation ul li" }
+@secondaryNavColor: #bbb;
+
+
+
+
+
+
+
+/* Blog Options */
+
+// tweak: { "type" : "dropdown", "title" : "Blog Sidebar", "options" : [ "Hide", "Left", "Right" ], "default" : "Right", "target" : ".hentry", "category" : "Blog Options", "showOnlyWhenPresent" : ".collection-type-blog", "target" : ".main-content" }
+
+// tweak: { "type" : "value", "title" : "Blog Sidebar Width", "min" : 50, "max" : 700, "step" : 5, "target" : ".main-content", "property" : "width", "showOnlyWhenPresent" : ".collection-type-blog.blog-sidebar-left, .collection-type-blog.blog-sidebar-right", "category" : "Blog Options" }
+@blogSidebarWidth: 180px;
+
+// tweak: { "type" : "value", "title" : "Blog Sidebar Padding", "min" : 10, "max" : 120, "step" : 5, "target" : ".main-content", "property" : "margin-right", "showOnlyWhenPresent" : ".collection-type-blog.blog-sidebar-left, .collection-type-blog.blog-sidebar-right", "category" : "Blog Options" }
+@blogSidebarPadding: 30px;
+
+// tweak: { "type" : "value", "title" : "Blog Post Spacing", "min" : 0, "max" : 200, "target" : ".main-content", "property" : "margin-bottom", "category" : "Blog Options", "showOnlyWhenPresent" : ".collection-type-blog" }
+@postPadding: 100px;
+
+// tweakOFF: { "type" : "dropdown", "title" : "Blog Gallery Icons", "options" : [ "Dark", "Light" ], "target" : ".gallery-controls", "category" : "Blog Options", "showOnlyWhenPresent" : ".collection-type-blog" }
+
+// tweak: { "type" : "color", "title" : "Blog Meta Data Color", "target" : ".main-content, .hentry footer, .hentry .meta", "category" : "Blog Options", "showOnlyWhenPresent" : ".collection-type-blog" }
+@metaColor: #aaa;
+
+
+
+
+
+
+/*  Gallery Options */
+
+// tweak: { "type" : "dropdown", "title" : "Gallery Style", "options" : [ "Fit", "Fill" ], "target" : "#slideshowWrapper", "js" : "true", "showOnlyWhenPresent" : ".collection-type-gallery", "category" : "Gallery Options", "showOnlyWhenPresent" : ".collection-type-gallery" }
+
+// tweak: { "type" : "value", "title" : "Gallery Padding", "min" : 0, "max" : 100, "step" : 5, "js" : "true", "category" : "Gallery Options", "showOnlyWhenPresent" : ".collection-type-gallery", "target" : "#slideshowWrapper" }
+@galleryPadding: 30px;
+
+
+// tweak: { "type" : "checkbox", "title" : "Enable Gallery Thumbnails", "default" : false, "showOnlyWhenPresent" : ".collection-type-gallery", "category" : "Gallery Options", "showOnlyWhenPresent" : ".collection-type-gallery", "target" : "#slideshowWrapper" }
+
+// tweak: { "type" : "dropdown", "title" : "Initial Gallery View", "options" : [ "Slideshow", "Thumbnails" ], "default" : "Slideshow", "showOnlyWhenPresent" : ".collection-type-gallery.enable-gallery-thumbnails", "category" : "Gallery Options", "target" : "#slideshowWrapper" }
+
+// tweak: { "type" : "dropdown", "title" : "Homepage Gallery View", "options" : [ "Inherit", "Slideshow", "Thumbnails" ], "default" : "Inherit", "showOnlyWhenPresent" : ".collection-type-gallery.enable-gallery-thumbnails", "category" : "Gallery Options", "target" : "#slideshowWrapper" }
+
+// tweak: { "type" : "dropdown", "title" : "Thumbnail Aspect Ratio", "options" : [ "Auto", "1:1 Square", "3:2 Standard", "2:3 Standard (Vertical)", "4:3 Four Thirds", "3:4 Four Thirds (Vertical)" ], "default" : "Auto", "target" : "#thumbnails", "js" : "true", "showOnlyWhenPresent" : ".collection-type-gallery.enable-gallery-thumbnails", "category" : "Gallery Options" }
+
+// tweak: { "type" : "value", "title" : "Thumbnail Width", "min" : 50, "max" : 500, "step" : 10, "target" : "#thumbnails .thumb", "property" : "width", "js" : "true", "showOnlyWhenPresent" : ".collection-type-gallery.enable-gallery-thumbnails", "category" : "Gallery Options" }
+@thumbnailWidth: 250px;
+
+// tweak: { "type" : "dropdown", "title" : "Gallery Controls", "options" : [ "Simple", "Numbers", "Bullets", "Hide" ], "target" : ".gallery-controls", "showOnlyWhenPresent" : ".collection-type-gallery", "category" : "Gallery Options", "showOnlyWhenPresent" : ".collection-type-gallery", "target" : "#slideshowWrapper, .gallery-controls" }
+
+// tweak: { "type" : "font", "title" : "Gallery Controls", "showOnlyWhenPresent" : ".collection-type-gallery", "category" : "Gallery Options", "showOnlyWhenPresent" : ".collection-type-gallery", "target" : "#slideshowWrapper, .gallery-controls" }
+.gallery-controls-font {
+  font-family: arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.2em;
+  text-transform: none;
+  letter-spacing: 0px;
+}
+
+// tweak: { "type" : "value", "title" : "Gallery Controls Size", "category" : "fonts", "min" : 8, "max" : 72, "showOnlyWhenPresent" : ".collection-type-gallery", "category" : "Gallery Options", "showOnlyWhenPresent" : ".collection-type-gallery", "target" : "#slideshowWrapper, .gallery-controls" }
+@galleryControlsSize: 12px;
+
+// tweak: { "type" : "color", "title" : "Gallery Controls Color", "showOnlyWhenPresent" : ".collection-type-gallery", "category" : "Gallery Options", "showOnlyWhenPresent" : ".collection-type-gallery", "target" : "#slideshowWrapper, .gallery-controls" }
+@galleryControls: #aaa;
+
+// tweak: { "type" : "color", "title" : "Gallery Controls (Active)", "showOnlyWhenPresent" : ".collection-type-gallery", "category" : "Gallery Options", "showOnlyWhenPresent" : ".collection-type-gallery", "target" : "#slideshowWrapper, .gallery-controls" }
+@galleryControlsActive: #222;
+
+
+
+/*  Social Link Options */
+
+// tweak: { "type" : "dropdown", "title" : "Social Icon Style", "options" : [ "Normal", "Round", "Square" ], "default" : "Normal", "category" : "Social Link Options", "target" : "#header", "showOnlyWhenPresent" : "body:not(.hide-social-icons)" }
+
+// tweak: { "type" : "checkbox", "title" : "Hide Social Icons", "default" : "false", "category" : "Social Link Options", "target" : "#header" }
+
+// tweak: { "type" : "value", "title" : "Social Icon Size", "min" : 16, "max" : 48, "category" : "Social Link Options", "target" : "#header", "showOnlyWhenPresent" : "body:not(.hide-social-icons)" }
+@socialIconSize: 16px;
+
+// tweak: { "type" : "color", "title" : "Social Icon Color", "category" : "Social Link Options", "target" : "#header", "showOnlyWhenPresent" : "body:not(.hide-social-icons)" }
+@socialIconColor: #8e959f;
+
+
+
+/* Products */
+
+// tweak: { "type" : "checkbox", "title" : "Show Category Navigation", "active" : "false", "target" : "#header, #categoryNav", "showOnlyWhenPresent" : ".collection-type-products", "category" : "Products" }
+
+// tweak: { "type" : "font", "title" : "Category Nav Font", "target" : "#header, #categoryNav", "category" : "Products", "showOnlyWhenPresent" : ".collection-type-products.show-category-navigation" }
+.category-nav-font {
+  font-family: "Helvetica", arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: 0px;
+  font-size: 13px;
+}
+
+// tweak: { "type" : "color", "title" : "Category Nav Color", "target" : "#header, #categoryNav", "category" : "Products", "showOnlyWhenPresent" : ".collection-type-products.show-category-navigation" }
+@categoryNavColor: #1f1f1f;
+
+// tweak: { "type" : "color", "title" : "Category Nav Active Color", "target" : "#header, #categoryNav", "category" : "Products", "showOnlyWhenPresent" : ".collection-type-products.show-category-navigation" }
+@categoryNavActiveColor: #a3a3a3;
+

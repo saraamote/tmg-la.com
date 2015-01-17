@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+{.if template.mobileStylesEnabled}
+<meta name="viewport" content="width=device-width,initial-scale=1">
+{.end}
+
+{squarespace-headers}
+</head>
+<body class="{squarespace.page-classes}" id="{squarespace.page-id}">
+
+  <div id="canvasWrapper">
+    <div id="canvas">
+
+      <div id="mobileNav" data-content-field="navigation-mobileNav"><div class="wrapper">
+        <squarespace:navigation navigationId="mainNav" template="mobile-navigation" />
+        <squarespace:navigation navigationId="secondaryNav" template="mobile-navigation" />
+      </div></div>
+
+      <div id="headerWrapper">
+      <header id="header">
+
+        <div id="topNavMobile">
+          <nav id="mobileMenuLink" class="main-nav clear"><ul><li class="active-link"><a>Menu</a></li></ul></nav>
+        </div>
+
+        <div id="logo" data-content-field="site-title">
+          {.section website}
+            <h1 class="logo{.section logoImageUrl} image{.or} site-title{.end}">
+              <a href="/">
+                {.if logoImageUrl}
+                  <img src="{logoImageUrl}?format=750w" alt="{siteTitle}" />
+                {.or}
+                  {siteTitle}
+                {.end}
+              </a>
+            </h1>
+            {.section siteTagLine}
+              <div class="logo-subtitle">{@}</div>
+            {.end}
+          {.end}
+        </div>
+
+        <script>
+          Y.use('squarespace-ui-base', function(Y) {
+            Y.one("h1.logo").plug(Y.Squarespace.TextShrink);
+          });
+        </script>
+
+        <div id="topNav" data-content-field="navigation">
+          <nav id="mainNavigation" class="main-nav dropdown-click desktop-nav">
+            <squarespace:navigation navigationId="mainNav" template="navigation" />
+          </nav>
+
+          <nav id="secondaryNavigation" class="main-nav dropdown-click desktop-nav">
+            <squarespace:navigation navigationId="secondaryNav" template="navigation" />
+          </nav>
+        </div>
+
+        <squarespace:block-field id="headerBlocks" label="Header Content" />
+
+      {.section website}
+        {.if socialAccounts}
+        <div id="footerBlocks-2" class="social-links" data-content-field="connected-accounts">
+          {.repeated section socialAccounts}<a{.if profileUrl} href="{profileUrl}" target="_blank"{.or} title="{screenname}"{.end} class="social-{serviceName}"></a>{.end}
+        </div>
+        {.end}
+      {.end}
+
+      </header>
+      </div>
+
+      <div id="pageWrapper" class="hfeed" role="main">
+        <!-- CATEGORY NAV -->
+        {.section collection}{.equal? typeName "products"}{.section categories}
+        <div id="categoryNav">
+          <input type="checkbox" name="category-nav-toggle" id="categoryNavToggle" class="category-nav-toggle hidden" />
+          <label for="categoryNavToggle" class="category-nav-toggle-label" onclick></label>
+          <nav class="category-nav">
+            <ul class="category-nav-links">
+              <li class="filter"><a>Filter{.if categoryFilter}: {categoryFilter}{.end}</a></li>
+              <li{.if categoryFilter}{.or} class="active-link all"{.end}><a href="{fullUrl}">All</a></li>
+              {.repeated section @}
+              <li{.equal? categoryFilter @} class="active-link"{.end}><a href="{fullUrl}?category={@|url-encode}">{@}</a></li>
+              {.end}
+            </ul>
+          </nav>
+        </div>
+        {.end}{.end}{.end}
+      <section id="page">
+
+      <div class="main-content" data-content-field="main-content">
+        {squarespace.main-content}
+      </div>
+
+      <aside id="sidebarWrapper">
+      <div id="sidebar">
+        <squarespace:block-field id="sidebarBlocks" label="Sidebar Content" />
+      </div>
+      </aside>
+
+      </section>
+      </div>
+
+    </div>
+  </div>
+
+<squarespace:script src="site.js" combo="true"/>
+{squarespace-footers}
+</body>
+</html>
+

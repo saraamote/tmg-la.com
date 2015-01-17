@@ -1,0 +1,53 @@
+<div id="galleryWrapper">
+
+  <div id="slideshowWrapper" class="{.section items}{.has-multiple?}{.or}single-image{.end}{.end}">
+    <div id="slideshow" class="slideshow">
+    	{.repeated section items}
+    		<div class="slide{.video?} video-slide{.end}" data-slide-id="{id}" data-slide-url="{urlId}">
+          {.image?}{@|image load-false}{.end}
+          {.video?}{@|video load-false}{.end}
+          {.section title}<div class="image-title-mobile"><strong>{@}</strong></div>{.end}
+          {.section body}<div class="image-desc-mobile">{@}</div>{.end}
+        </div>
+    	{.end}
+    </div>
+    <div class="overlay-controls left-control"></div>
+    <div class="overlay-controls center-control thumbnail-toggle"></div>
+    <div class="overlay-controls right-control"></div>
+    <div id="thumbnails">
+      {.repeated section items}
+        <div class="thumb" data-slide-id="{id}">
+          <img {@|image-meta} data-load="false"/>
+        </div>
+      {.end}
+    </div>
+  </div>
+
+  <div class="meta">
+
+    <div id="imageData">
+      {.repeated section items}
+      <div class="slide">
+        <div class="slide-meta-wrapper">
+          {.section title}<div class="image-title"><strong>{@}</strong></div>{.end}
+          {.section body}<div class="image-desc">{@}</div>{.end}
+        </div>
+      </div>
+      {.end}
+    </div>
+
+    <div id="simpleControls" class="gallery-controls{.section items.1}{.or} hidden{.end}">
+        <span class="control prev-slide">prev</span> / <span class="control next-slide">next</span>
+    </div>
+
+    <div id="numberControls" class="gallery-controls{.section items.1}{.or} hidden{.end}">{.repeated section items}<span class="number">{@index} </span>{.end}</div>
+
+    <div id="dotControls" class="gallery-controls{.section items.1}{.or} hidden{.end}">{.repeated section items}<span class="dot">&middot;</span>{.end}</div>
+
+    <div class="thumbnail-toggle">show thumbnails</div>
+
+  </div>
+
+</div>
+
+
